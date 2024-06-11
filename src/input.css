@@ -4,7 +4,27 @@
 
 
 @layer utilities {
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
     .custom-font{
         font-family: cursive;
     }
+    .fulll-screen-heroo-section-column{
+        grid-template-columns: 60% 40%;
+    }
+    .fulll-screen-heroo-section-left-side{
+        height: calc(100svh - 80px);
+    }
+    .fulll-screen-heroo-section-heading::before{
+      content: "";
+      position: absolute;
+      border-bottom: 5px solid green;
+      width: 70px;
+      top:4rem;
+    }
+
+
   }
