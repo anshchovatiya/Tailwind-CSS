@@ -26,5 +26,19 @@
       top:4rem;
     }
 
-
+    .Call-to-action-section-images{
+        @apply rounded-full relative;
+    }
+     .Footer-grid{
+        grid-template-columns: 1fr;
+    }
+   @media (min-width:1024px) {
+       
+        .Footer-grid{
+             grid-template-columns: 30% 25% 15% 30%;
+        }
+    }
+    .fa-brands{
+        @apply text-3xl
+    }
   }
