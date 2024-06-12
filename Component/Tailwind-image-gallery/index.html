@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind image gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-slate-200">
+    <main class="max-w-[1450px] m-auto min-h-svh pt-8">
+      <div class="flex justify-between items-center flex-col md:flex-row py-4 max-w-[92vw] m-auto">
+        <div class="flex gap-12 flex-col md:flex-row text-center md:text-left">
+          <p class="text-4xl font-bold">Gallery</p>
+          <p class="max-w-[600px] text-gray-600 font-normal text-base">
+            This is a section of some simple filter text, also known as
+            placeholder text. It shares some characteristics of a real written
+            text.
+          </p>
+        </div>
+        <button
+          class="border-[2px] border-gray-400 rounded-lg px-8 py-2 text-gray-500 tracking-wider font-bold mt-6 md:mt-0 hover:bg-slate-900 hover:text-white hover:border-slate-900 hover:scale-110 transition-all duration-700"
+        >
+          More
+        </button>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 md:h-[75svh] h-[1000px]  max-h-[1000px] max-w-[92svw] m-auto mt-8 gap-[2vw] "
+      >
+        <div class="images">
+          <img
+            class="w-full h-full"
+            src="./assets/image-1.webp"
+            alt="random image"
+          />
+          <p class="absolute bottom-3 left-5 text-white font-normal tracking-wider">VR</p>
+        </div>
+        <div class="images col-span-2">
+          <img
+            class="w-full h-full"
+            src="./assets/image-2.jpeg"
+            alt="random image"
+          />
+          <p class="absolute bottom-3 left-5 text-white font-medium tracking-wider">Tech</p>
+        </div>
+        <div class="images col-span-2">
+          <img
+            class="w-full h-full"
+            src="./assets/image-3.jpg"
+            alt="random image"
+          />
+          <p class="absolute bottom-3 left-5 text-white font-medium tracking-wider">Dev</p>
+        </div>
+        <div class="images">
+          <img
+            class="w-full h-full"
+            src="./assets/image-4.jpg"
+            alt="random image"
+          />
+          <p class="absolute bottom-3 left-5 text-white font-medium tracking-wider">Retro</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
