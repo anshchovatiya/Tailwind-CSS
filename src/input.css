@@ -137,6 +137,12 @@
     width: 70svw;
     margin:auto
   }
+
+  .card-main-height{
+    height: calc(100svh - 96px);
+  } 
   }
+
+
 
 }
