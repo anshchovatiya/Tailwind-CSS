@@ -138,11 +138,38 @@
     margin:auto
   }
 
-  .card-main-height{
-    height: calc(100svh - 96px);
-  } 
+  
   }
+    .card-main-height{
+      height: calc(100svh - 96px);
+    } 
+  
+    .Responsive-products-grid{
+      grid-template-rows: 80% 20%;
+    }
+  
+    .card{
+      transition: all 0.6s ease-in-out;
+      @apply h-[370px]  grid text-left shadow-md bg-white rounded-lg overflow-hidden mb-8 md:mb-0;
+    }
+    .card img{
+      transition: all 0.6s ease-in-out;
+    }
 
+    .card:hover{
+      @apply shadow-2xl; 
+      scale: 1.1;
+    }
+    .card:hover img{
+      scale: 1.1;
+    }
 
+    .Product-feature-section-grid{
+      grid-template-columns: 40% 60%;
+    }
+    
+    .API-file-button{
+      font-weight: 800;
+    }
 
 }
