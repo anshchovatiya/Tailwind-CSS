@@ -5,10 +5,14 @@ module.exports = {
     fontFamily: {
 
     'ansh': ['Helvetica', 'Arial', 'sans-serif'],
-    extend: {
-      
     },
-  },
+
+
+    extend: {
+      boxShadow: {
+        'card': ' 0px 3px 8px rgb(0, 0, 0);',
+      }
+    },
   plugins: [],
 }
 
