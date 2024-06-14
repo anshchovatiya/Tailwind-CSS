@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive-registration-form</title>
+    <link rel="stylesheet" href="style.css">
+      <!-- font awesome link  -->
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body class="bg-slate-200 min-h-svh grid">
+    <main class="max-w-[1440px] grid grid-cols-1 md:grid-cols-[3fr_4fr] bg-white mx-auto py-12">
+        <div class="flex items-center justify-center flex-col">
+            <div class="flex items-center gap-2 text-blue-600">
+                <i class="fa-brands fa-edge text-8xl"></i>
+                <p class="text-lg font-bold">templatana</p>
+            </div>
+            <p class="text-3xl font-extrabold mt-12">Sign up</p>
+            <div class="px-4 md:px-12 py-3 bg-[#E0E7FF] hover:bg-blue-700 hover:text-white hover:cursor-pointer duration-500 flex gap-4 items-center mt-8 w-[70%] rounded-lg">
+                <i class="fa-brands fa-google bg-white px-2 py-2 rounded-full text-black"></i>
+                <p class=" text-base font-bold">Sign Up with Google</p>
+            </div>
+            <div class="px-4 md:px-12 py-3 bg-[#E0E7FF] flex gap-4 items-center mt-8 w-[70%] rounded-lg hover:bg-blue-700 hover:text-white hover:cursor-pointer duration-500 ">
+                <i class="fa-brands fa-github bg-white px-2 py-2 rounded-full text-black"></i>
+                <p class="text-base font-bold">Sign Up with GitHub</p>
+            </div>
+            <div class="flex items-center w-[80%] my-8">
+                <hr class="h-[2px] bg-slate-500 w-6/12 ">
+                <p class="text-nowrap text-base text-slate-500 font-bold px-4">Or sign up with e-mail</p>
+                <hr class="h-[2px] bg-slate-500 w-6/12  ">
+            </div>
+            <form class="w-[70%]">
+                <input type="email" id="email" name="email" class="w-full bg-slate-200 py-4 px-7 text-lg font-semibold tracking-wider rounded-lg" placeholder="Email">
+                <input type="password" id="email" name="email" class="w-full bg-slate-200 py-4 px-7 text-lg font-semibold tracking-wider rounded-lg mt-5" placeholder="Password">
+                <input type="submit" id="email" name="email" class="w-full bg-blue-600 py-4 px-7 text-lg font-semibold tracking-wider rounded-lg mt-5 text-white hover:bg-slate-800 hover:cursor-pointer duration-500" value="Sign Up">
+            </form>
+            <p class=" text-center max-w-[400px] font-semibold tracking-wide text-slate-500 mt-8">I agree to abide by templantana's <a href="#" class="underline decoration-dotted inline-block underline-offset-4 hover:text-blue-600">Terms of Services</a> and its <a href="#" class="underline decoration-dotted inline-block underline-offset-4 hover:text-blue-600">Privacy Policy</a></p>
+        </div>
+        <div class="flex items-center">
+            <img class="h-[60%] mx-auto md:mx-0" src="./assets/hero-image.gif" alt="coder illustration">
+        </div>
+    </main>
+</body>
+</html>
