@@ -1,50 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cards</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="h-24 flex justify-center md:justify-between items-center px-[4vw] max-w-[1440px] m-auto mb-24 md:mb-2 ">
-        <p class="text-xl font-normal tracking-widest">Acme.inc</p>
-        <ul class=" gap-[2.5vw] hidden md:flex">
-            <li ><a href="#" class="text-base font-normal tracking-wider hover:text-blue-600">About Us</a></li>
-            <li ><a href="#" class="text-base font-normal tracking-wider hover:text-blue-600">Tretments</a></li>
-            <li ><a href="#" class="text-base font-normal tracking-wider hover:text-blue-600">Blog</a></li>
-            <li ><a href="#" class="text-base font-normal tracking-wider hover:text-blue-600">Contact Us</a></li>
-        </ul>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header
+      class="h-24 flex justify-center md:justify-between items-center px-[4vw] max-w-[1440px] m-auto md:mb-2"
+    >
+      <p class="text-xl tracking-widest font-bold">Acme.inc</p>
+      <ul class="gap-[2.5vw] hidden md:flex">
+        <li>
+          <a
+            href="#"
+            class="text-base font-normal tracking-wider hover:text-blue-600"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-base font-normal tracking-wider hover:text-blue-600"
+            >Tretments</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-base font-normal tracking-wider hover:text-blue-600"
+            >Blog</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-base font-normal tracking-wider hover:text-blue-600"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
     </header>
 
-    <main class="card-main-height bg-slate-900">
-
+    <main
+      class="md:card-main-height max-w-[1100px] m-auto grid grid-cols-1 px-8 md:grid-cols-3 gap-6 mt-6 md:mt-16 pb-12"
+    >
+      <div>
+        <p class="text-lg font-semibold text-blue-700">Everything you need</p>
+        <p class="text-2xl my-6 font-bold">All-in-one platform</p>
+        <p class="Description">
+          Lorem ipsum, do lor sit amet c on se cv tetur adipisicing elit. Ma ior
+          es impedit perferendis suscipit eaque, iste dolor cupiditate
+          blanditiis ratione.
+        </p>
+      </div>
+      <div class="flex flex-col gap-12">
+        <div class="box flex gap-4">
+          <i class="fa-solid fa-check inline-block text-base mt-2"></i>
+          <div>
+            <p class="text-base mt-1 font-semibold">Invite team members</p>
+            <p class="Description mt-2">
+              Rerum repell at labore necessitatibus reprehenderit molestiae
+              praesentium.
+            </p>
+          </div>
+        </div>
+        <div class="box flex gap-4">
+          <i class="fa-solid fa-check inline-block text-base mt-2"></i>
+          <div>
+            <p class="text-base mt-1 font-semibold">Keyboard shortcuts</p>
+            <p class="Description mt-2">
+              In sit qui aliquid deleniti et. Ad nobis sunt omnis. Quo sapiente
+              dicta laboriosam.
+            </p>
+          </div>
+        </div>
+        <div class="box flex gap-4">
+          <i class="fa-solid fa-check inline-block text-base mt-2"></i>
+          <div>
+            <p class="text-base mt-1 font-semibold">List view</p>
+            <p class="Description mt-2">
+              Corporis asperiores ea nulla temporibus asperiores non tempore
+              assumenda aut.
+            </p>
+          </div>
+        </div>
+        <div class="box flex gap-4">
+          <i class="fa-solid fa-check inline-block text-base mt-2"></i>
+          <div>
+            <p class="text-base mt-1 font-semibold">Reporting</p>
+            <p class="Description mt-2">
+              Eos laudantium repellat sed architecto earum unde incidunt. Illum
+              sit dolores voluptatem.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-12">
+        <div class="box flex gap-4">
+          <i class="fa-solid fa-check inline-block text-base mt-2"></i>
+          <div>
+            <p class="text-base mt-1 font-semibold">List view</p>
+            <p class="Description mt-2">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, ullam delectus. Laborum.
+            </p>
+          </div>
+        </div>
+        <div class="box flex gap-4">
+          <i class="fa-solid fa-check inline-block text-base mt-2"></i>
+          <div>
+            <p class="text-base mt-1 font-semibold">Calendars</p>
+            <p class="Description mt-2">
+                Sed rerum sunt dignissimos ullam. Iusto iure occaecati voluptate eligendi fugiat sequi.
+            </p>
+          </div>
+        </div>
+        <div class="box flex gap-4">
+          <i class="fa-solid fa-check inline-block text-base mt-2"></i>
+          <div>
+            <p class="text-base mt-1 font-semibold">Boards</p>
+            <p class="Description mt-2">
+                Quae sit sunt excepturi fugit veniam voluptatem ipsum commodi.
+            </p>
+          </div>
+        </div>
+        <div class="box flex gap-4">
+          <i class="fa-solid fa-check inline-block text-base mt-2"></i>
+          <div>
+            <p class="text-base mt-1 font-semibold">
+                Mobile app</p>
+            <p class="Description mt-2">
+                Nulla est saepe accusamus nostrum est est. Fugit voluptatum omnis quidem voluptatem.
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>
 
-
-
-<!-- text  -->
-
-
-
-<!-- Everything you need
-All-in-one platform
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
-Invite team members
-Rerum repellat labore necessitatibus reprehenderit molestiae praesentium.
-Keyboard shortcuts
-In sit qui aliquid deleniti et. Ad nobis sunt omnis. Quo sapiente dicta laboriosam.
-List view
-Corporis asperiores ea nulla temporibus asperiores non tempore assumenda aut.
-Calendars
-Sed rerum sunt dignissimos ullam. Iusto iure occaecati voluptate eligendi fugiat sequi.
-Notifications
-Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.
-Boards
-Quae sit sunt excepturi fugit veniam voluptatem ipsum commodi.
-✓ Reporting
-Eos laudantium repellat sed architecto earum unde incidunt. Illum sit dolores voluptatem.
-Mobile app
-Nulla est saepe accusamus nostrum est est. Fugit voluptatum omnis quidem voluptatem. -->

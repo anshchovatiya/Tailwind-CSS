@@ -141,7 +141,7 @@
   
   }
     .card-main-height{
-      height: calc(100svh - 96px);
+      height: calc(100svh - 300px);
     } 
   
     .Responsive-products-grid{
@@ -170,6 +170,10 @@
     
     .API-file-button{
       font-weight: 800;
+    }
+
+    .Description{
+      @apply text-sm font-normal text-slate-500;
     }
 
 }
