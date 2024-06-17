@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="blur.css">
+       <!-- font-awesome link -->
+       <link
+       rel="stylesheet"
+       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer"
+     />
+</head>
+<body>
+    <div class="grid md:grid-cols-[60%_40%] text-center md:text-left gap-8 dark:bg-slate-900 dark:text-white bg-blue-600 h-svh overflow-hidden m-auto py-12 px-8 md:px-[15%]  items-center">
+        <div class="text-white">
+            <p class=" font-bold text-2xl md:text-4xl my-6">Discover the world's best coffee</p>
+            <p class="text-xl font-normal mb-3">From hand-picked farms to your cup, we source the finest beans and roast them to perfection.</p>
+            <button class="py-2 px-4 bg-white text-blue-700 rounded-3xl font-bold hover:bg-slate-800 hover:text-white duration-700">Shop now</button>
+            <button class=" text-black">
+                <i
+                  class="fa-solid fa-moon text-3xl bg-gray-50 p-2 px-3 rounded-full"
+                  id="toggleDark"
+                  onclick="document.body.classList.toggle('dark')"
+                ></i>
+              </button>
+        </div>
+        <div class="overflow-hidden rounded-lg">
+            <img class="h-full w-full" src="./assets/aesthetic-leaf-background-0wk96i4i0qgpujxv.jpg" alt="coffee image">
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+          const toggleDark = document.getElementById("toggleDark");
+          toggleDark.addEventListener("click", function () {
+            if (document.documentElement.classList.includes("dark")) {
+              document.documentElement.classList.remove("dark");
+            } else {
+              document.documentElement.classList.add("dark");
+            }
+            alert("click!");
+          });
+        });
+      </script>
+</body>
+</html>
