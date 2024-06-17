@@ -192,4 +192,18 @@
     scale: 1.1;
   }
 
+
+  input::file-selector-button {
+    background-color: transparent;
+    border: 2px solid rgb(175, 173, 173); 
+    @apply px-6 py-2;
+  }
+  input::file-selector-button:hover {
+   @apply bg-slate-950 text-white border-slate-950
+  }
+
+  progress[value]::-webkit-progress-value {
+    @apply bg-blue-700;
+  }
+
 }

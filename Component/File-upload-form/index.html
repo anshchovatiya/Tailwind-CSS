@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File-upload-form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <form class="max-w-[550px] m-auto grid p-3">
+      <p class="py-5">send files to this email:</p>
+      <input
+        class="px-4 py-3 rounded text-base mb-8 border-2 border-gray-300"
+        type="email"
+        class="email"
+        name="email"
+        placeholder="example@domain.com"
+      />
+      <p class="font-bold text-xl tracking-wide mb-3">Upload File</p>
+      <label
+        for="file-upload"
+        class="cursor-pointer h-[260px]  border-2 border-gray-300 flex justify-center items-center flex-col"
+        >
+        <p class="text-2xl font-semibold my-1">Drop files here</p>
+        <p class="text-base font-normal">Or</p>
+        <input class="mt-2 inpu font-semibold" type="file" id="file-upload" />
+      </label>
+      <div class="flex justify-between items-center py-4 mt-8 rounded-md bg-slate-200 px-7 text-base font-semibold">
+        <p>banner-design.png</p>
+        <i class="fa-solid fa-xmark hover:text-blue-700 hover:cursor-pointer"></i>
+      </div>
+      <div class=" bg-slate-200 px-7 py-4 mt-8  rounded-md ">
+      <div class="flex justify-between items-centertext-base font-semibold">
+        <p>banner-design.png</p>
+        <i class="fa-solid fa-xmark hover:text-blue-700 hover:cursor-pointer"></i>
+    </div>
+    <progress class="w-full h-[6px] rounded-lg overflow-hidden bg-blue-700" id="file" value="80" max="100"> 32% </progress>
+</div>
+    <input type="submit" value="Send File" class="bg-blue-600 mt-5 py-3 rounded-md text-white font-bold hover:cursor-pointer hover:bg-slate-800 duration-500">
+    </form>
+  </body>
+</html>
