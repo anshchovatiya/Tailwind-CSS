@@ -5,13 +5,17 @@
 
 @layer utilities{
 
+  ::-webkit-scrollbar{
+    width: 0px;
+  }
+
 .button-container{
     transition: all 0.6s ease-in-out;
     @apply before:content-['']  before:right-0 before:w-0 before:bg-[#FFB400] before:absolute before:h-[200%];
   }
 
   .button-container:before{
-    transition: all 1s ease-in-out;
+    transition: all 0.7s ease-in-out;
     }
   .button-container:hover:before{
      width: 200%;
@@ -19,67 +23,128 @@
 
     
     .nav-button{
-        @apply text-xl p-4 bg-[#ffffff25] rounded-full w-fit hover:bg-[#FFB400] text-white; 
+        @apply text-xl p-4 bg-[#0000001d] dark:bg-[#ffffff25] rounded-full w-fit hover:bg-[#FFB400] hover:text-white text-[#666666] dark:text-white; 
     }
 
   .hero-navbar-button{
     @apply flex gap-5 items-center w-full justify-end rounded-full  cursor-pointer duration-500;
   }
   .nav-bar-description{
-    @apply text-lg absolute translate-x-[300px] tracking-widest text-white py-3 px-5 font-semibold  w-full rounded-full duration-700 bg-[#FFB400];
+    @apply text-base absolute translate-x-[300px] tracking-widest text-white flex pl-5 items-center font-semibold h-full w-full rounded-full duration-700 bg-[#FFB400];
   }
 
-  .cursor{
-    z-index: 999;
-    height: 10px;
+  
+  
+  @media (max-width:1024px) {
+    .cursor-hover{
+      transform: scale(6);
+    }
+  }
+  .link{
+    user-select: none;  
+    cursor: pointer;
+  }
+
+  .cursor-ball {
     width: 10px;
-    background:#FFB400;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px #FFB400,0px 0px 60px #FFB400,0px 0px 100px #FFB400;
-    @apply fixed -translate-x-[50%]  -translate-y-[50%];
-    animation: colors 5s infinite;
-    transition: all 0.05s linear;
-    pointer-events: none;
+    height: 10px;
+    background-color: #FFB400;
   }
-  .cursor-outer{
-
-    @apply w-10 h-10 fixed -translate-x-[50%] -translate-y-[50%] border-2 border-[#FFB400] opacity-45 rounded-full;
-    transition: all 0.09s linear;
+  
+  .cursor-outline {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1.5px solid #FFB400;
+    transition: all 0.08s linear;
   }
-
-    @keyframes colors {
-      0%{
-        filter: hue-rotate(0deg);
-      }
-      100%{
-        filter: hue-rotate(360deg);
-      }
-    }
-}
-
-
-
-
-
- /* gradient cursor  */
-/* .cursor{
-  z-index: 999;
-  height: 20px;
-  width: 20px;
-  background:#FFB400;
+  .cursor-ball,
+.cursor-outline {
   border-radius: 50%;
-  box-shadow: 0px 0px 20px #FFB400,0px 0px 60px #FFB400,0px 0px 100px #FFB400;
-  @apply before:content-[''] fixed cursor-pointer -translate-x-[50%]  -translate-y-[50%];
-  animation: colors 5s infinite;
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+  transform: translate(-50%, -50%)
 }
-.cursor::before{
-  @apply w-12 h-12 absolute -translate-x-[30%] -translate-y-[30%] bg-[#FFB400] opacity-45 rounded-full;
+
+.cursor-mousedown {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: royalblue;
+  transition: 0.2s;
 }
-  @keyframes colors {
-    0%{
-      filter: hue-rotate(0deg);
-    }
-    100%{
-      filter: hue-rotate(360deg);
-    }
-  }  */
+
+.cursor-hover{
+  transition: 0.4s;
+  transform: scale(8.5);
+  opacity: 0.2;
+}
+
+
+.page-trans1{
+  animation:page-trans 2.3s ease-in-out 0s;
+}
+@keyframes page-trans {
+  0%{
+    top:0;
+    bottom: 0;
+  }
+  100%{
+    top: -300svh;
+  }
+}
+
+.page-trans2{
+  animation:page-trans 2.3s ease-in-out 0s;
+}
+@keyframes page-trans {
+  0%{
+    top:0;
+    bottom: 0;
+  }
+  100%{
+    top: -400svh;
+  }
+}
+.page-trans3{
+  animation:page-trans 2.3s ease-in-out 0s;
+}
+@keyframes page-trans {
+  0%{
+    top:0;
+    bottom: 0;
+  }
+  100%{
+    top: -500svh;
+  }
+}
+.page-trans4{
+  animation:page-trans 2.3s ease-in-out 0s;
+}
+@keyframes page-trans {
+  0%{
+    top:0;
+    bottom: 0;
+  }
+  100%{
+    top: -600svh;
+  }
+}
+.page-trans5{
+  animation:page-trans 2.3s ease-in-out 0s;
+}
+@keyframes page-trans {
+  0%{
+    top:0;
+    bottom: 0;
+  }
+  100%{
+    top: -700svh;
+  }
+}
+
+}
+
+
+
+
+

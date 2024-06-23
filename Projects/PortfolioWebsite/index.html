@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="Root" class="dark scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -16,44 +16,45 @@
         .circle {
             background: conic-gradient(from 0deg, #FFB400 0%, #FFB400 0% var(--i), #333 var(--i), #333 100%);
         }
-        .hide{
+
+        .hide {
             display: hidden;
         }
     </style>
 </head>
 
-<body class="bg-black w-full min-w-[380px]">
- <!-- this will customize the cursor of the browser  -->
- <div class="cursor">
-</div>
- <div class="cursor-outer">
-</div>
+<body id="bodyTag" class="bg-[#111111] overflow-x-hidden cursor-none   min-w-[370px]">
+    <!-- this will customize the cursor of the browser  -->
+    <div class="cursor-ball cursor"></div>
+    <div class="cursor-outline cursorOutline"></div>
 
-    <!-- menu bar  -->
+
     <i
-        class="ri-menu-line inline-block fixed right-7 top-7 text-white text-2xl py-2 px-4 bg-[#252525] rounded-md lg:hidden z-50"></i>
-    <i
-        class="fa-solid fa-gear fixed right-7 top-24 text-white text-2xl p-4 bg-[#252525] rounded-full lg:top-7 z-50"></i>
-    <!-- menu bar ended  -->
+        class="link ri-menu-line w-fit fixed right-7  top-7 text-[#666666] dark:text-white text-2xl py-2 px-4 bg-[#252525] rounded-md lg:hidden z-50 duration-75"></i>
+
     <!-- navigation bar started -->
-    <div class="hidden fixed lg:flex flex-col justify-center top-0 right-6 h-full w-[185px] gap-6 z-50 ">
-        <div id="HOME-button" class="hero-navbar-button group relative rounded-full overflow-hidden">
+    <div class="hidden fixed lg:flex flex-col justify-center top-0 right-6 h-full w-[170px] gap-6 z-50 ">
+        <!-- menu bar  -->
+        <i id="dark-button"
+            class="link fa-solid fa-sun duration-500 fixed right-6 top-24 inline-block text-white text-2xl p-4 bg-[#252525] rounded-full hover:bg-[#FFB400] lg:top-7 z-50 "></i>
+        <!-- menu bar ended  -->
+        <div id="HOME-button" class="link hero-navbar-button group relative rounded-full overflow-hidden">
             <p class="group-hover:translate-x-[0px] nav-bar-description">HOME</p>
             <a href="#" class="inline-block z-50 "><i class="fa-solid fa-house  nav-button"></i></a>
         </div>
-        <div id="ABOUT-button" class="hero-navbar-button group relative rounded-full overflow-hidden ">
+        <div id="ABOUT-button" class="link hero-navbar-button group relative rounded-full overflow-hidden ">
             <p class="lg:group-hover:translate-x-[0px] nav-bar-description">ABOUT</p>
             <a href="#" class="inline-block z-50 "><i class="fa-solid fa-user nav-button"></i></a>
         </div>
-        <div class="hero-navbar-button group relative rounded-full overflow-hidden ">
+        <div class="link hero-navbar-button group relative rounded-full overflow-hidden ">
             <p class="lg:group-hover:translate-x-[0px] nav-bar-description">PORTFOLIO</p>
             <a href="#" class="inline-block z-50 "><i class="fa-solid fa-briefcase nav-button"></i></a>
         </div>
-        <div class="hero-navbar-button group relative rounded-full overflow-hidden ">
+        <div class="link hero-navbar-button group relative rounded-full overflow-hidden ">
             <p class="lg:group-hover:translate-x-[0px] nav-bar-description">CONTACT</p>
             <a href="#" class="inline-block z-50 "><i class="fa-solid fa-address-book nav-button"></i></a>
         </div>
-        <div class="hero-navbar-button group relative rounded-full overflow-hidden ">
+        <div class="link hero-navbar-button group relative rounded-full overflow-hidden ">
             <p class="lg:group-hover:translate-x-[0px] nav-bar-description">BLOG</p>
             <a href="#" class="inline-block z-50"><i class="fa-solid fa-message nav-button "></i></a>
         </div>
@@ -63,14 +64,15 @@
 
 
     <!-- pages started  -->
-    <div class="min-h-svh w-full bg-[#111111]">
+    <div class="w-full bg-white  dark:bg-[#111111]">
         <!-- hero section  -->
         <div id="HOME"
-            class="h-full relative lg:after:block after:content-['f'] md:after:w-[30vw] after:-left-52 after:absolute after:bg-[#FFB400] after:h-full after:skew-x-[15deg] after:top-0 after:hidden ">
+            class="h-svh relative lg:after:block after:content-['f'] md:after:w-[30vw] after:-left-52 after:absolute after:bg-[#FFB400] after:h-full after:skew-x-[15deg] after:top-0 after:hidden z-10 overflow-hidden">
             <!-- main div that hold the content  -->
             <div
-                class="flex flex-col justify-center h-full w-full p-6 text-white lg:grid lg:grid-cols-[35%_65%] lg:items-center">
-                <img class="hidden sm:block h-[270px] w-[270px]  object-cover mx-auto rounded-full mb-8 border-4 border-slate-700 lg:h-[calc(100svh-100px)] lg:my-auto lg:mx-5 lg:w-full lg:rounded-3xl z-20 lg:border-none lg:shadow-hero "
+                class="flex flex-col justify-center h-full  w-full p-6 text-[#666666] dark:text-white lg:grid lg:grid-cols-[35%_65%] lg:items-center">
+                <img id="hero-image"
+                    class="hidden sm:block h-[270px] w-[270px]  object-cover mx-auto rounded-full mb-8 border-4 border-slate-700 lg:h-[calc(100svh-100px)] lg:my-auto lg:mx-5 lg:w-full lg:rounded-3xl z-20 lg:border-none lg:shadow-hero "
                     src="./assets/hero-section-profile-image.jpg" alt="My Profile image">
                 <div class="lg:pl-[10%]">
                     <div class="mt-8 flex gap-4">
@@ -88,10 +90,10 @@
                         focused on crafting clean & user‑friendly experiences, I am passionate about building excellent
                         software that improves the lives of those around me.</p>
                     <div
-                        class="button-container relative overflow-hidden mt-8 border-[#FFB400] border w-fit rounded-full flex items-center cursor-pointer sm:max-lg:mx-auto">
-                        <a class="inline-block z-20  px-8 text-base font-semibold " href="#">MORE ABOUT ME</a>
+                        class="link button-container relative overflow-hidden mt-8 border-[#FFB400] border w-fit rounded-full flex items-center cursor-pointer sm:max-lg:mx-auto">
+                        <a class="inline-block z-20  px-8 text-base font-bold " href="#">MORE ABOUT ME</a>
                         <i
-                            class="fa-solid fa-arrow-right z-40 bg-[#FFB400] text-2xl p-4 rounded-full font-extrabold"></i>
+                            class="fa-solid fa-arrow-right z-40 bg-[#FFB400] text-2xl p-4 rounded-full font-extrabold text-[#666666] dark:text-white"></i>
                     </div>
                 </div>
             </div>
@@ -100,20 +102,21 @@
         </div>
         <!-- hero section ended  -->
         <!-- Resume Section started -->
-        <div id="ABOUT" class="hidden max-md:w-full md:max-lg:max-w-[720px] lg:w-[calc(100svw-200px)] max-w-[1350px] m-auto h-full">
+        <div id="ABOUT"
+            class="hidden duration-500  md:max-lg:max-w-[720px] lg:w-[calc(100svw-200px)] max-w-[1350px] m-auto ">
             <!-- heading started  -->
             <h2
-                class="text-white text-3xl sm:text-6xl sm:text  relative font-extrabold p-4 bg-[#252525] sm:bg-transparent sm:text-center sm:py-20 z-20 overflow-hidden">
+                class="text-[#666666]  dark:text-white text-3xl sm:text-6xl sm:text  relative font-extrabold p-4 bg-[#252525] sm:bg-transparent sm:text-center sm:py-20 z-20 overflow-hidden">
                 ABOUT <span class="text-[#FFB400] z-20">ME</span>
                 <p
                     class=" hidden sm:flex absolute top-0 h-full w-full text-9xl items-center justify-center -z-10 opacity-10">
                     RESUME</p>
             </h2>
-            <!-- heading ended  -->
+            <!-- heading ended -->
             <!-- personal info section started  -->
             <div class="grid  px-8 lg:grid-cols-2 gap-5">
                 <div class="left-side-info-section">
-                    <p class="text-2xl text-white py-7 font-extrabold">PERSONAL INFOS</p>
+                    <p class="text-2xl text-[#666666]  dark:text-white py-7 font-extrabold">PERSONAL INFOS</p>
                     <!-- profile image  -->
                     <div>
                         <img class="w-60 h-60 object-cover rounded-full m-auto mb-8 border-[5px] border-[#252525] sm:hidden"
@@ -123,91 +126,92 @@
                     <div class="grid grid-cols-2">
                         <div class="left-info">
                             <p class="text-gray-400 text-base font-semibold mb-5">First Name : <span
-                                    class="text-white sm:max-lg:block ">Ansh</span></p>
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">Ansh</span></p>
                             <p class="text-gray-400 text-base font-semibold mb-5">Last Name : <span
-                                    class="text-white sm:max-lg:block ">Chovatiya</span></p>
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">Chovatiya</span></p>
                             <p class="text-gray-400 text-base font-semibold mb-5">Age : <span
-                                    class="text-white sm:max-lg:block ">19
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">19
                                     Years</span></p>
                             <p class="text-gray-400 text-base font-semibold mb-5">Nationality : <span
-                                    class="text-white sm:max-lg:block ">Indian</span></p>
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">Indian</span></p>
                             <p class="text-gray-400 text-base font-semibold mb-5">Freelance : <span
-                                    class="text-white sm:max-lg:block ">Available</span></p>
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">Available</span></p>
                         </div>
                         <div class="right-info">
                             <p class="text-gray-400 text-base font-semibold mb-5">Address: <span
-                                    class="text-white sm:max-lg:block ">Surat</span></p>
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">Surat</span></p>
                             <p class="text-gray-400 text-base font-semibold mb-5">Phone : <span
-                                    class="text-white sm:max-lg:block ">+91 78620 73896</span></p>
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">+91 78620 73896</span></p>
                             <p class="text-gray-400 text-base font-semibold mb-5">Email : <span
-                                    class="text-white sm:max-lg:block  break-words">anshchovatiya800@gmail.com</span>
+                                    class="text-[#666666] dark:text-white sm:max-lg:block  break-words">anshchovatiya800@gmail.com</span>
                             </p>
                             <p class="text-gray-400 text-base font-semibold mb-5">UPI : <span
-                                    class="text-white sm:max-lg:block ">anshchovatiya@ybl</span></p>
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">anshchovatiya@ybl</span></p>
                             <p class="text-gray-400 text-base font-semibold mb-5">Languages : <span
-                                    class="text-white sm:max-lg:block ">English,Hindi,Gujarati</span></p>
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">English,Hindi,Gujarati</span>
+                            </p>
                         </div>
                     </div>
                     <!-- button section  -->
                     <div
-                        class="button-container relative overflow-hidden mt-3 border-[#FFB400] border w-fit rounded-full flex items-center cursor-pointer  text-white">
-                        <a class="inline-block z-20  px-8 text-lg font-bold" href="#">Download CV</a>
+                        class="link button-container relative overflow-hidden mt-3 border-[#FFB400] border w-fit rounded-full flex items-center cursor-pointer  text-[#666666]  dark:text-white">
+                        <a class="inline-block z-20  px-8 text-lg font-bold text" href="#">Download CV</a>
                         <i
-                            class="fa-solid fa-arrow-right z-40 bg-[#FFB400] text-2xl p-4 rounded-full font-extrabold"></i>
+                            class="fa-solid fa-arrow-right z-40 bg-[#FFB400] text-2xl p-4 rounded-full font-extrabold text-white"></i>
                     </div>
                 </div>
-                <div class="right-side-info-section py-8 text-white gap-6 flex">
+                <div class="right-side-info-section py-8 text-[#666666] dark:text-white gap-6 flex">
                     <div class="flex-1">
-                    <div class="border border-[#202020] p-8 rounded-lg mb-8">
-                        <p
-                            class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
-                            12</p>
-                        <div class="flex ">
-                            <div
-                                class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#363535] shrink-0 hidden md:block">
+                        <div class="border border-[#202020] p-8 rounded-lg mb-8">
+                            <p
+                                class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
+                                12</p>
+                            <div class="flex ">
+                                <div
+                                    class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#363535] shrink-0 hidden md:block">
+                                </div>
+                                <p class="text-base font-medium">YEARS OF <span
+                                        class="block md:inline-block lg:block ">EXPERIENCE</span></p>
                             </div>
-                            <p class="text-base font-medium">YEARS OF <span
-                                    class="block md:inline-block lg:block ">EXPERIENCE</span></p>
+                        </div>
+                        <div class="border border-[#202020] p-8 rounded-lg">
+                            <p
+                                class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
+                                81</p>
+                            <div class="flex ">
+                                <div
+                                    class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#363535] shrink-0 hidden md:block">
+                                </div>
+                                <p class="text-base font-medium">HAPPY <span
+                                        class="block md:inline-block lg:block">CUSTOMERS</span></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="border border-[#202020] p-8 rounded-lg">
-                        <p
-                            class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
-                            81</p>
-                        <div class="flex ">
-                            <div
-                                class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#363535] shrink-0 hidden md:block">
+                    <div class="flex-1">
+                        <div class="border border-[#202020] p-8 rounded-lg mb-8">
+                            <p
+                                class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
+                                97</p>
+                            <div class="flex ">
+                                <div
+                                    class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#363535] shrink-0 hidden md:block">
+                                </div>
+                                <p class="text-base font-medium">COMPLETED <span
+                                        class="block md:inline-block lg:block">PROJECTS</span></p>
                             </div>
-                            <p class="text-base font-medium">HAPPY <span
-                                    class="block md:inline-block lg:block">CUSTOMERS</span></p>
+                        </div>
+                        <div class="border border-[#202020] p-8 rounded-lg">
+                            <p
+                                class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
+                                97</p>
+                            <div class="flex ">
+                                <div
+                                    class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#363535] shrink-0 hidden md:block">
+                                </div>
+                                <p class="text-base font-medium">AWARDS WON</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="flex-1">
-                    <div class="border border-[#202020] p-8 rounded-lg mb-8">
-                        <p
-                            class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
-                            97</p>
-                        <div class="flex ">
-                            <div
-                                class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#363535] shrink-0 hidden md:block">
-                            </div>
-                            <p class="text-base font-medium">COMPLETED <span
-                                    class="block md:inline-block lg:block">PROJECTS</span></p>
-                        </div>
-                    </div>
-                    <div class="border border-[#202020] p-8 rounded-lg">
-                        <p
-                            class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
-                            97</p>
-                        <div class="flex ">
-                            <div
-                                class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#363535] shrink-0 hidden md:block">
-                            </div>
-                            <p class="text-base font-medium">AWARDS WON</p>
-                        </div>
-                    </div>
-                </div>
                 </div>
             </div>
             <!-- personal info section ended  -->
@@ -215,7 +219,7 @@
             <!-- divider -->
             <hr class="w-1/2 m-auto my-16 max-w-[500px] border-t border-[#242323]">
             <!-- skills section started   -->
-            <div class="text-white  text-center">
+            <div class="text-[#666666] dark:text-white  text-center">
                 <p class="text-2xl md:text-3xl font-bold mt-8 mb-4">MY SKILLS</p>
                 <!-- skills grid started  -->
                 <div class=" grid grid-cols-2 md:grid-cols-4 h-[970px] md:h-[600px] max-w-[1000px] m-auto pb-8 gap-x-5">
@@ -223,7 +227,9 @@
                     <div class="box m-auto">
                         <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
                             style="--i:90%;">
-                            <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">90%
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                90%
                             </p>
                             <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">HTML</p>
                         </div>
@@ -231,7 +237,9 @@
                     <div class="box m-auto">
                         <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
                             style="--i:85%;">
-                            <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">85%
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                85%
                             </p>
                             <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">CSS</p>
                         </div>
@@ -239,7 +247,9 @@
                     <div class="box m-auto">
                         <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
                             style="--i:30%;">
-                            <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">30%
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                30%
                             </p>
                             <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">JAVASCRIPT</p>
                         </div>
@@ -247,7 +257,9 @@
                     <div class="box m-auto">
                         <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
                             style="--i:95%;">
-                            <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">95%
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                95%
                             </p>
                             <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">C Lang</p>
                         </div>
@@ -255,7 +267,9 @@
                     <div class="box m-auto">
                         <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
                             style="--i:90%;">
-                            <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">90%
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                90%
                             </p>
                             <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">C++</p>
                         </div>
@@ -263,7 +277,9 @@
                     <div class="box m-auto">
                         <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
                             style="--i:70%;">
-                            <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">70%
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                70%
                             </p>
                             <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">DSA</p>
                         </div>
@@ -271,7 +287,9 @@
                     <div class="box m-auto">
                         <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
                             style="--i:80%;">
-                            <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">80%
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                80%
                             </p>
                             <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">SASS</p>
                         </div>
@@ -279,7 +297,9 @@
                     <div class="box m-auto">
                         <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
                             style="--i:85%;">
-                            <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">85%
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                85%
                             </p>
                             <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">TAILWIND</p>
                         </div>
@@ -289,14 +309,13 @@
 
                 </div>
                 <!-- skills section ended   -->
-              <!-- divider -->
-              <hr class="w-1/2 m-auto my-16 max-w-[500px] border-t border-[#242323]">
-                
+                <!-- divider -->
+                <hr class="w-1/2 m-auto my-16 max-w-[500px] border-t border-[#242323]">
+
                 <!-- experiences and education section started  -->
-                 <div>
-                    <p class="text-2xl md:text-3xl font-bold tracking-wide mt-8 mb-16">EXPERIENCE & EDUCATION</p>
-                    <!-- experiences section grid started -->
-                     <div class="grid md:grid-cols-2  px-8 pb-16 gap-10">
+                <div>
+                    <p class="text-2xl md:text-3xl font-bold tracking-wide mt-8 mb-16 ">EXPERIENCE & EDUCATION</p>
+                    <div class="grid md:grid-cols-2  px-8 pb-16 gap-10 z-10">
                         <!-- experiences -->
                         <div class="flex gap-6 text-left ">
                             <div class="h-full relative overflow-hidden">
@@ -305,9 +324,13 @@
                                 before:left-[calc(50%-1.5px)] before:bg-[#242323] before:rounded-full"></p>
                             </div>
                             <div class="flex-1">
-                                <p class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">2024-PRESENT</p>
-                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">- ENVATO</span></p>
-                                <p class="mt-3 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum atque esse. Quasi, non enim!</p>
+                                <p
+                                    class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">
+                                    2024-PRESENT</p>
+                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">-
+                                        ENVATO</span></p>
+                                <p class="mt-3 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Corporis illum atque esse. Quasi, non enim!</p>
                             </div>
                         </div>
                         <!-- education -->
@@ -318,9 +341,13 @@
                                 before:left-[calc(50%-1.5px)] before:bg-[#242323] before:rounded-full"></p>
                             </div>
                             <div class="flex-1">
-                                <p class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">2024-PRESENT</p>
-                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">- ENVATO</span></p>
-                                <p class="mt-3 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum atque esse. Quasi, non enim!</p>
+                                <p
+                                    class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">
+                                    2024-PRESENT</p>
+                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">-
+                                        ENVATO</span></p>
+                                <p class="mt-3 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Corporis illum atque esse. Quasi, non enim!</p>
                             </div>
                         </div>
                         <!-- experiences -->
@@ -331,9 +358,13 @@
                                 before:left-[calc(50%-1.5px)] before:bg-[#242323] before:rounded-full"></p>
                             </div>
                             <div class="flex-1">
-                                <p class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">2024-PRESENT</p>
-                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">- ENVATO</span></p>
-                                <p class="mt-3 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum atque esse. Quasi, non enim!</p>
+                                <p
+                                    class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">
+                                    2024-PRESENT</p>
+                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">-
+                                        ENVATO</span></p>
+                                <p class="mt-3 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Corporis illum atque esse. Quasi, non enim!</p>
                             </div>
                         </div>
                         <!-- education -->
@@ -344,9 +375,13 @@
                                 before:left-[calc(50%-1.5px)] before:bg-[#242323] before:rounded-full"></p>
                             </div>
                             <div class="flex-1">
-                                <p class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">2024-PRESENT</p>
-                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">- ENVATO</span></p>
-                                <p class="mt-3 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum atque esse. Quasi, non enim!</p>
+                                <p
+                                    class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">
+                                    2024-PRESENT</p>
+                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">-
+                                        ENVATO</span></p>
+                                <p class="mt-3 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Corporis illum atque esse. Quasi, non enim!</p>
                             </div>
                         </div>
                         <!-- experiences -->
@@ -357,9 +392,13 @@
                                 before:left-[calc(50%-1.5px)] before:bg-[#242323] before:rounded-full"></p>
                             </div>
                             <div class="flex-1">
-                                <p class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">2024-PRESENT</p>
-                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">- ENVATO</span></p>
-                                <p class="mt-3 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum atque esse. Quasi, non enim!</p>
+                                <p
+                                    class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">
+                                    2024-PRESENT</p>
+                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">-
+                                        ENVATO</span></p>
+                                <p class="mt-3 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Corporis illum atque esse. Quasi, non enim!</p>
                             </div>
                         </div>
                         <!-- education -->
@@ -370,21 +409,38 @@
                                 before:left-[calc(50%-1.5px)] before:bg-[#242323] before:rounded-full"></p>
                             </div>
                             <div class="flex-1">
-                                <p class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">2024-PRESENT</p>
-                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">- ENVATO</span></p>
-                                <p class="mt-3 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum atque esse. Quasi, non enim!</p>
+                                <p
+                                    class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">
+                                    2024-PRESENT</p>
+                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">-
+                                        ENVATO</span></p>
+                                <p class="mt-3 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Corporis illum atque esse. Quasi, non enim!</p>
                             </div>
                         </div>
-                     </div>
-                    <!-- experiences section grid ended -->
-                 </div>
+                    </div>
+                </div>
                 <!-- experiences and education section ended  -->
 
             </div>
             <!-- Resume Section ended -->
         </div>
         <!-- pages ended  -->
-         <script src="script.js"></script>
+        <!-- this is div for page-transition -->
+        <div id="tr-1" class="hidden fixed top-0 bottom-0 left-0 w-svw overflow-hidden h-svh z-[99]">
+            <div class=" page-trans1 h-[100svh] relative bg-[#FFB400] z-50 w-full "></div>
+            <div id="tr-2" class=" page-trans2 h-[100svh] relative bg-[#111111] z-50 w-full "></div>
+            <div id="tr-3" class=" page-trans3 h-[100svh] relative bg-[#FFB400] z-50 w-full "></div>
+            <div id="tr-4" class=" page-trans4 h-[100svh] relative bg-[#111111] z-50 w-full "></div>
+            <div id="tr-5" class=" page-trans5 h-[100svh] relative bg-[#FFB400] z-50 w-full "></div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
