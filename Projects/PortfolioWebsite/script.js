@@ -8,7 +8,8 @@ let heroImage = document.getElementById("hero-image");
 let darkButton = document.getElementById("dark-button");
 let Root = document.getElementById("Root");
 let currentPage = Home;
-
+let Portfolio = document.getElementById("PORTFOLIO");
+let PortfolioButton= document.getElementById("PORTFOLIO-button");
 let animationSlides = document.getElementById("tr-1");
 
 
@@ -23,6 +24,12 @@ function cursorAbsolute() {
     cursorBall.style.position = "absolute";
     cursorOutline.style.position = "absolute";
 }
+
+
+
+
+
+
 
 // this is function to control About page button 
 AboutButton.addEventListener("click", () => {
@@ -53,6 +60,23 @@ HomeButton.addEventListener("click", () => {
     }, 2300);
 
 })
+
+
+// this is function to control Portfolio page button 
+
+PortfolioButton.addEventListener("click",()=>{
+    animationSlides.classList.remove("hidden");
+    cursorAbsolute();
+    setTimeout(() => {
+        currentPage.classList.add("hidden");
+        currentPage = Portfolio;
+        Portfolio.classList.remove("hidden");
+    }, 1200);
+    setTimeout(function () {
+        animationSlides.classList.add("hidden");
+    }, 2300);
+});
+
 
 // this is function to control light mode and dark mode buttons
 document.addEventListener("DOMContentLoaded", () => {
