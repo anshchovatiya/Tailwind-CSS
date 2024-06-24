@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("menu.css");
 
 @layer utilities{
 
@@ -60,7 +61,7 @@
   .cursor-ball,
 .cursor-outline {
   border-radius: 50%;
-  position: fixed;
+  position: absolute;
   z-index: 100;
   pointer-events: none;
   transform: translate(-50%, -50%)
@@ -142,6 +143,18 @@
   }
 }
 
+#MenuBar{
+  animation: menubar 2s linear;
+}
+
+  @keyframes menubar {
+    0%{
+      right: -100%;
+    }
+    100%{
+    right: 0px;
+    }
+  }
 }
 
 

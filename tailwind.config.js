@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       boxShadow: {
         'hero': ' 0 0 7px rgba(0,0,0,.9)',
+      },
+      screens: {
+        'tablet': '400px',
       }
     },
   },
