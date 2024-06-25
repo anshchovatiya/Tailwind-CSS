@@ -15,18 +15,37 @@
     <style>
         .circle {
             background: conic-gradient(from 0deg, #FFB400 0%, #FFB400 0% var(--i), #333 var(--i), #333 100%);
-        };
+        }
+
+        ;
     </style>
 </head>
 
-<body id="bodyTag" class=" relative dark:bg-[#111111] cursor-none  ">
+<body id="bodyTag" class="overflow-x-hidden relative dark:bg-[#111111] cursor-none duration-200 ">
 
-    
-  <!-- menubar button  -->
-  <div id="MenuBar" class="fixed z-[99] top-0 right-0 duration-700 origin-right w-full bg-[#252525] h-full p-16 "> 
-   
-</div>
-<!-- menubar button ended -->
+
+    <!-- menubar button  -->
+    <div id="Menu"
+        class="fixed z-[99] top-0 right-0  w-[100px]  bg-slate-200 dark:bg-[#252525] h-full  hidden flex-col justify-center items-center lg:hidden cursor-pointer gap-6 ">
+        <div class="HOME-button link  group duration-600 hover:bg-[#FFB400] rounded-full bg-[#00000032] ">
+            <i class="fa-solid fa-house dark:text-white text-[#222222] text-2xl inline-block p-4"></i>
+        </div>
+        <div class="ABOUT-button link  group duration-1000 hover:bg-[#FFB400] rounded-full bg-[#00000032] ">
+            <i class="fa-solid fa-user dark:text-white text-[#222222] text-2xl inline-block p-4"></i>
+        </div>
+        <div class="PORTFOLIO-button link  group duration-1000 hover:bg-[#FFB400] rounded-full bg-[#00000032] ">
+            <i class="fa-solid fa-briefcase p-4 dark:text-white text-[#222222] text-2xl inline-block"></i>
+        </div>
+        <div class="CONTACT-button link  group duration-1000 hover:bg-[#FFB400]  rounded-full bg-[#00000032] ">
+            <i class="fa-solid  fa-address-book p-4 dark:text-white text-[#222222] text-2xl inline-block"></i>
+        </div>
+        <div class="BLOG-button link  group duration-1000 hover:bg-[#FFB400]  rounded-full bg-[#00000032] ">
+            <i class="fa-solid  fa-message p-4  dark:text-white text-[#222222] text-2xl inline-block"></i>
+        </div>
+
+        <i class="fa-solid fa-xmark dark:text-white text-[#222222] text-2xl absolute top-6 m-auto link Menu-Close"></i>
+    </div>
+    <!-- menubar button ended -->
 
 
     <!-- this will customize the cursor of the browser  -->
@@ -35,7 +54,7 @@
 
 
     <i id="MenuButton"
-        class=" link ri-menu-line w-fit fixed right-7  top-7 text-[#666666] dark:text-white text-2xl py-2 px-4 bg-[#252525] rounded-md lg:hidden z-[99] duration-75"></i>
+        class=" link ri-menu-line w-fit fixed right-7  top-7 text-white text-2xl py-2 px-4 bg-[#252525] rounded-md lg:hidden z-[99] duration-75"></i>
 
     <!-- navigation bar started -->
     <div class="hidden fixed lg:flex flex-col justify-center top-0 right-6 h-full w-[170px] gap-6 z-50 ">
@@ -43,23 +62,23 @@
         <i id="dark-button"
             class="link fa-solid fa-sun duration-500 fixed right-6 top-24 inline-block text-white text-2xl p-4 bg-[#252525] rounded-full hover:bg-[#FFB400] lg:top-7 z-50 "></i>
         <!-- menu bar ended  -->
-        <div id="HOME-button" class="link hero-navbar-button group relative rounded-full overflow-hidden">
+        <div class="HOME-button link hero-navbar-button group relative rounded-full overflow-hidden">
             <p class="group-hover:translate-x-[0px] nav-bar-description">HOME</p>
             <a href="#" class="inline-block z-50 "><i class="fa-solid fa-house  nav-button"></i></a>
         </div>
-        <div id="ABOUT-button" class="link hero-navbar-button group relative rounded-full overflow-hidden ">
+        <div class="ABOUT-button link hero-navbar-button group relative rounded-full overflow-hidden ">
             <p class="lg:group-hover:translate-x-[0px] nav-bar-description">ABOUT</p>
             <a href="#" class="inline-block z-50 "><i class="fa-solid fa-user nav-button"></i></a>
         </div>
-        <div id="PORTFOLIO-button" class="link hero-navbar-button group relative rounded-full overflow-hidden ">
+        <div class="PORTFOLIO-button link hero-navbar-button group relative rounded-full overflow-hidden ">
             <p class="lg:group-hover:translate-x-[0px] nav-bar-description">PORTFOLIO</p>
             <a href="#" class="inline-block z-50 "><i class="fa-solid fa-briefcase nav-button"></i></a>
         </div>
-        <div class="link hero-navbar-button group relative rounded-full overflow-hidden ">
+        <div class="CONTACT-button link hero-navbar-button group relative rounded-full overflow-hidden ">
             <p class="lg:group-hover:translate-x-[0px] nav-bar-description">CONTACT</p>
             <a href="#" class="inline-block z-50 "><i class="fa-solid fa-address-book nav-button"></i></a>
         </div>
-        <div class="link hero-navbar-button group relative rounded-full overflow-hidden ">
+        <div class="BLOG-button link hero-navbar-button group relative rounded-full overflow-hidden ">
             <p class="lg:group-hover:translate-x-[0px] nav-bar-description">BLOG</p>
             <a href="#" class="inline-block z-50"><i class="fa-solid fa-message nav-button "></i></a>
         </div>
@@ -69,11 +88,11 @@
 
 
     <!-- pages started  -->
-    <div class="w-full bg-white  dark:bg-[#111111]">
+    <div class="w-full bg-white  dark:bg-[#111111] ">
 
         <!-- hero section  -->
         <div id="HOME"
-            class="  h-svh relative lg:after:block after:content-[''] md:after:w-[30vw] after:-left-52 after:absolute after:bg-[#FFB400] after:h-full after:skew-x-[15deg] after:top-0 after:hidden z-10 overflow-hidden ">
+            class="h-svh relative lg:after:block after:content-[''] md:after:w-[30vw] after:-left-52 after:absolute after:bg-[#FFB400] after:h-full after:skew-x-[15deg] after:top-0 after:hidden z-10 overflow-hidden ">
             <!-- main div that hold the content  -->
             <div
                 class="flex flex-col justify-center h-full  w-full p-6 text-[#666666] dark:text-white lg:grid lg:grid-cols-[35%_65%] lg:items-center ">
@@ -116,7 +135,7 @@
                 class="text-[#666666] w-full dark:text-white text-3xl sm:text-6xl sm:text  relative font-extrabold p-4 bg-[#252525] sm:bg-transparent sm:text-center sm:py-20 z-20 overflow-hidden">
                 ABOUT <span class="text-[#FFB400] z-20">ME</span>
                 <p
-                    class=" hidden sm:flex absolute top-0 h-full w-full text-9xl items-center justify-center -z-10 opacity-10">
+                    class=" hidden sm:flex absolute top-0 h-full w-full group-hover:scale-125 duration-300 text-9xl items-center justify-center -z-10 opacity-10">
                     RESUME</p>
             </h2>
             <!-- heading ended -->
@@ -494,6 +513,224 @@
         </div>
         <!-- Portfolio section ended  -->
 
+        <!-- contact section started here  -->
+        <div id="CONTACT"
+            class="mx-auto min-h-svh md:max-lg:max-w-[720px] lg:w-[calc(100svw-200px)] max-w-[1250px] hidden">
+            <h2
+                class="text-[#666666] w-full  dark:text-white text-2xl sm:text-[56px] relative font-extrabold p-4 bg-[#252525] sm:bg-transparent sm:text-center sm:py-20 z-20 overflow-hidden flex sm:justify-center sm:items-center">
+                GET IN <span class="text-[#FFB400] z-20 ml-3 ">TOUCH</span>
+                <p
+                    class=" hidden sm:flex absolute top-0 h-full w-full text-[110px]  tracking-[12px] items-center justify-center -z-10 opacity-10">
+                    CONTACT</p>
+            </h2>
+
+            <div class="grid lg:grid-cols-3 p-6 gap-8 mt-10">
+                <div class=" dark:text-white text-[#222222]">
+                    <p class="text-xl sm:text-2xl  lg:text-3xl font-extrabold">DON'T BE SHY!</p>
+                    <p class="text-base mt-5 font-medium">Feel free to get in touch with me. I am always open to
+                        discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                    <div class="flex items-center gap-6 mt-8 ">
+                        <i class="fa-solid fa-envelope-open text-3xl text-[#FFB400]"></i>
+                        <div>
+                            <p class="text-slate-800 dark:text-slate-200 text-base">MAIL ME</p>
+                            <p class="text-sm font-bold">anshchovatiya800@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6 mt-8 ">
+                        <i class="fa-solid fa-phone text-3xl text-[#FFB400]"></i>
+                        <div>
+                            <p class="text-slate-800 dark:text-slate-200 text-base">CALL ME</p>
+                            <p class="text-sm font-bold">+91 78620 73896</p>
+                        </div>
+                    </div>
+                    <div
+                        class="my-8 *:bg-[#222222] *:h-[40px] sm:*:h-[55px] *:w-[40px] sm:*:w-[55px] sm:text-2xl *:flex *:justify-center *:items-center flex gap-2 *:rounded-full text-white ">
+                        <a href="#" class="inline-block hover:bg-[#FFB400] duration-300"><i
+                                class="fa-brands fa-facebook-f px-4 py-3  link"></i></a>
+                        <a href="#" class="inline-block hover:bg-[#FFB400] duration-300"><i
+                                class="fa-brands fa-whatsapp p-3  link"></i></a>
+                        <a href="#" class="inline-block hover:bg-[#FFB400] duration-300"><i
+                                class="fa-brands fa-telegram p-3  link"></i></a>
+                        <a href="#" class="inline-block hover:bg-[#FFB400] duration-300"><i
+                                class="fa-brands fa-instagram p-3  link"></i></a>
+                    </div>
+                </div>
+                <div class="col-span-2  lg:px-8 w-full">
+                    <form action="index.html">
+                        <div
+                            class="grid sm:grid-cols-3 gap-y-8 dark:*:bg-[#252525] gap-x-[2.5vw] *:py-3 *:rounded-full *:px-5 *:text-base *:text-slate-800 *:dark:text-slate-200 *:border-2 *:border-slate-700 *:dark:border-none  *:font-light">
+                            <input type="text" id="user-name" placeholder="YOUR NAME"
+                                class="flex-1 dark:text-white  focus:outline-[#FFB400]">
+                            <input type="email" id="user-email" placeholder="YOUR EMAIL"
+                                class="flex-1 dark:text-white  focus:outline-[#FFB400]">
+                            <input type="text" id="user-subject" placeholder="YOUR SUBJECT"
+                                class="flex-1 dark:text-white  focus:outline-[#FFB400]">
+                        </div>
+                        <textarea name="Massage" id="mail"
+                            class="min-h-[200px] mt-9 w-full rounded-3xl text-[#252525] dark:text-white dark:bg-[#252525] bg-white p-5  border-2 border-slate-700 dark:border-none focus:outline-[#FFB400] "
+                            placeholder="YOUR MESSAGE"></textarea>
+                        <button for="submit"
+                            class="link button-container relative overflow-hidden mt-8 border-[#FFB400] border w-fit rounded-full flex items-center cursor-pointer max-lg:mx-auto text-[#666666] dark:text-white m-">
+                            <p class="inline-block z-20  px-8 text-base font-bold">MORE ABOUT ME</p>
+                            <i
+                                class="fa-solid fa-arrow-right z-40 bg-[#FFB400] text-2xl p-4 rounded-full font-extrabold ">
+                            </i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <!-- contact section ended here  -->
+
+        <!-- blog section started here  -->
+        <div id="BLOG"
+            class="mx-auto min-h-svh md:max-lg:max-w-[750px] lg:w-[calc(100svw-200px)] max-w-[1200px] overflow-x-hidden hidden">
+            <h2
+                class="text-[#666666] w-full  dark:text-white text-2xl sm:text-[56px] relative font-extrabold p-4 bg-[#252525] sm:bg-transparent sm:text-center sm:py-20 lg:pt-20 z-20 overflow-hidden flex sm:justify-center sm:items-center">
+                MY <span class="text-[#FFB400] z-20 ml-3 ">BLOGS</span>
+                <p
+                    class=" hidden sm:flex absolute top-0 h-full w-full text-[110px]  tracking-[12px] items-center justify-center -z-10 opacity-10">
+                    POSTS</p>
+            </h2>
+            <div id="NumberOne"
+                class="blog-grid grid md:grid-cols-2 xl:grid-cols-3 p-8 text-[#666666] dark:text-white gap-8">
+                <div
+                    class="blog-card-1 shadow-sm cursor-pointer grid group grid-rows-[55%_45%] md:grid-rows-[50%_50%] h-[480px] lg:h-[420px] bg-[#F2F2F2] dark:bg-[#252525] rounded-md overflow-hidden  mx-auto sm:max-w-[480px]">
+                    <div
+                        class="after:content-[''] relative after:absolute after:h-[4px] after:bottom-0 after:bg-[#FFB400] after:z-50 after:w-full overflow-hidden">
+                        <img src="./assets/blog-post-1.jpg" class="h-full w-full group-hover:scale-125 duration-300"
+                            alt="blog image">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xl font-bold link hover:text-[#FFB400]">How to Own Your Audience by Creating an
+                            Email List</p>
+                        <p class="text-lg font-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore ...</p>
+                    </div>
+                </div>
+                <div
+                    class="blog-card-2 shadow-sm cursor-pointer grid group grid-rows-[55%_45%] md:grid-rows-[50%_50%] h-[480px] lg:h-[420px] bg-[#F2F2F2] dark:bg-[#252525] rounded-md overflow-hidden  mx-auto sm:max-w-[480px]">
+                    <div
+                        class="after:content-[''] relative after:absolute after:h-[4px] after:bottom-0 after:bg-[#FFB400] after:z-50 after:w-full overflow-hidden">
+                        <img src="./assets/blog-post-2.jpg" class="h-full w-full group-hover:scale-125 duration-300"
+                            alt="blog image">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xl font-bold link hover:text-[#FFB400]">Top 10 Toolkits for Deep Learning in 2020
+                        </p>
+                        <p class="text-lg font-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore ...</p>
+                    </div>
+                </div>
+                <div
+                    class="blog-card-3 shadow-sm cursor-pointer grid group grid-rows-[55%_45%] md:grid-rows-[50%_50%] h-[480px] lg:h-[420px] bg-[#F2F2F2] dark:bg-[#252525] rounded-md overflow-hidden  mx-auto sm:max-w-[480px]">
+                    <div
+                        class="after:content-[''] relative after:absolute after:h-[4px] after:bottom-0 after:bg-[#FFB400] after:z-50 after:w-full overflow-hidden">
+                        <img src="./assets/blog-post-3.jpg" class="h-full w-full group-hover:scale-125 duration-300"
+                            alt="blog image">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xl font-bold link hover:text-[#FFB400]">Everything You Need to Know About Web
+                            Accessibility</p>
+                        <p class="text-lg font-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore ...</p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="NumberTwo"
+                class="hidden blog-grid  md:grid-cols-2 xl:grid-cols-3 p-8 text-[#666666] dark:text-white gap-8">
+                <div
+                    class="blog-card-4 shadow-sm cursor-pointer grid group grid-rows-[55%_45%] md:grid-rows-[50%_50%] h-[480px] lg:h-[420px] bg-[#F2F2F2] dark:bg-[#252525] rounded-md overflow-hidden  mx-auto sm:max-w-[480px]">
+                    <div
+                        class="after:content-[''] relative after:absolute after:h-[4px] after:bottom-0 after:bg-[#FFB400] after:z-50 after:w-full overflow-hidden">
+                        <img src="./assets/blog-post-4.jpg" class="h-full w-full group-hover:scale-125 duration-300"
+                            alt="blog image">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xl font-bold link hover:text-[#FFB400]">How to Inject Humor & Comedy Into Your
+                            Brand</p>
+                        <p class="text-lg font-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore ...</p>
+                    </div>
+                </div>
+                <div
+                    class="blog-card-5 shadow-sm cursor-pointer grid group grid-rows-[55%_45%] md:grid-rows-[50%_50%] h-[480px] lg:h-[420px] bg-[#F2F2F2] dark:bg-[#252525] rounded-md overflow-hidden  mx-auto sm:max-w-[480px]">
+                    <div
+                        class="after:content-[''] relative after:absolute after:h-[4px] after:bottom-0 after:bg-[#FFB400] after:z-50 after:w-full overflow-hidden">
+                        <img src="./assets/blog-post-5.jpg" class="h-full w-full group-hover:scale-125 duration-300"
+                            alt="blog image">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xl font-bold link hover:text-[#FFB400]">Women in Web Design: How To Achieve
+                            Success</p>
+                        <p class="text-lg font-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore ...</p>
+                    </div>
+                </div>
+                <div
+                    class="blog-card-6 shadow-sm cursor-pointer grid group grid-rows-[55%_45%] md:grid-rows-[50%_50%] h-[480px] lg:h-[420px] bg-[#F2F2F2] dark:bg-[#252525] rounded-md overflow-hidden  mx-auto sm:max-w-[480px]">
+                    <div
+                        class="after:content-[''] relative after:absolute after:h-[4px] after:bottom-0 after:bg-[#FFB400] after:z-50 after:w-full overflow-hidden">
+                        <img src="./assets/blog-post-6.jpg" class="h-full w-full group-hover:scale-125 duration-300"
+                            alt="blog image">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xl font-bold link hover:text-[#FFB400]">Evergreen versus topical content: An
+                            overview</p>
+                        <p class="text-lg font-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore ...</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex justify-center gap-7">
+                <button id="blog-button-one"
+                    class=" py-3 px-5 dark:text-white text-lg rounded-full font-bold link  bg-[#FFB400]">1</button>
+                <button id="blog-button-two"
+                    class=" py-3 px-5 dark:text-white text-lg rounded-full font-bold link  bg-[#0000ff25]">2</button>
+            </div>
+        </div>
+        <!-- blog section ended here  -->
+
+
+        <!-- blog full page started  -->
+        <div id="Blog-Description" class="fixed h-full w-full dark:bg-[#111111] mx-auto  overflow-x-hidden text-[#666666] dark:text-white hidden">
+            <h2
+                class="text-[#666666] w-full  dark:text-white text-2xl sm:text-[56px] relative font-extrabold p-4 bg-[#252525] sm:bg-transparent sm:text-center sm:py-20 lg:pt-20 z-20 overflow-hidden flex sm:justify-center sm:items-center">
+                MY <span class="text-[#FFB400] z-20 ml-3 ">BLOGS</span>
+                <p
+                    class=" hidden sm:flex absolute top-0 h-full w-full text-[110px]  tracking-[12px] items-center justify-center -z-10 opacity-10">
+                    POSTS</p>
+            </h2>
+            <div class=" max-w-[900px] m-auto px-9 my-8">
+                <div class="flex sm:items-center gap-6 max-sm:flex-col items-start">
+                    <div class="text-sm flex gap-2 items-center">
+                        <i class="fa-solid fa-user text-[#FFB400]"></i>
+                        <p class="Blog-Writer-name">Steve</p>
+                    </div>
+                    <div class="text-sm flex gap-2 items-center">
+                        <i class="fa-solid fa-calendar-days text-[#FFB400]"></i>
+                        <p class="Blog-date">09 December 2023</p>
+                    </div>
+                    <div class="text-sm flex gap-2 items-center">
+                        <i class="fa-solid fa-tag text-[#FFB400]"></i>
+                        <p class="Blog-text">wordpress, business, economy, design</p>
+                    </div>
+                </div>
+            </div>
+            <div class=" max-w-[900px] m-auto px-9 mb-16">
+                <p class="text-2xl md:text-5xl font-bold blog-tittle ">Top 10 Toolkits For Deep Learning In 2020</p>
+                <img src="./assets/blog-post-1.jpg" alt="blog-image" class="my-8 rounded-xl blog-image">
+                <p class="text-base mb-3 font-noramal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quasi exercitationem at vitae esse nihil voluptatibus aliquam consequuntur quidem commodi natus nostrum id ad in et sint quo illum autem vero explicabo ex accusamus optio magni a. Nobis officiis laboriosam culpa animi sit similique, facilis fuga, repudiandae doloremque illum quidem?</p>
+                <p class="text-base mb-3 font-noramal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quasi exercitationem at vitae esse nihil voluptatibus aliquam consequuntur quidem commodi natus nostrum id ad in et sint quo illum autem vero explicabo ex accusamus optio magni a. Nobis officiis laboriosam culpa animi sit similique, facilis fuga, repudiandae doloremque illum quidem?</p>
+                <p class="text-base mb-3 font-noramal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quasi exercitationem at vitae esse nihil voluptatibus aliquam consequuntur quidem commodi natus nostrum id ad in et sint quo illum autem vero explicabo ex accusamus optio magni a. Nobis officiis laboriosam culpa animi sit similique, facilis fuga, repudiandae doloremque illum quidem?</p>
+            </div>
+        </div>
+        <!-- blog full page ended  -->
+
+
         <!-- website project-Description container started  -->
         <div
             class="Description fixed top-0 bg-[#000000b8] w-full h-full z-[99]  justify-center items-center  m-auto hidden ">
@@ -533,15 +770,11 @@
                 </div>
             </div>
         </div>
-        <!-- website project-Description container ended  -->
 
-      
+        <!-- website project-Description container ended  -->
 
     </div>
     <!-- pages ended  -->
-
-
-
 
 
 
@@ -561,33 +794,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-<!-- <div class="flex text-white gap-6 text-xl items-center my-3 ">
-    <a href="#" class="px-3"><i class="fa-solid fa-house"></i></a>
-    <p class="font-light text-2xl overflow-hidden tracking-widest z-[99]">HOME</p>
-</div>
-<hr class=" max-w-[500px] border-[1px] z-[100] mt-3">
-<div class="flex text-white gap-6 text-xl items-center my-3 ">
-    <a href="#" class="px-3"><i class="fa-solid fa-user"></i></a>
-    <p class="font-light text-2xl overflow-hidden tracking-widest z-[99]">ABOUT</p>
-</div>
-<hr class=" max-w-[500px] border-[1px] z-[100] mt-3">
-<div class="flex text-white gap-6 text-xl items-center my-3 ">
-    <a href="#" class="px-3"><i class="fa-solid fa-briefcase"></i></a>
-    <p class="font-light text-2xl overflow-hidden tracking-widest z-[99]">PORTFOLIO</p>
-</div>
-<hr class=" max-w-[500px] border-[1px] z-[100] mt-3">
-<div class="flex text-white gap-6 text-xl items-center my-3 ">
-    <a href="#" class="px-3"><i class="fa-solid fa-address-book"></i></a>
-    <p class="font-light text-2xl overflow-hidden tracking-widest z-[99]">CONTACT</p>
-</div>
-<hr class=" max-w-[500px] border-[1px] z-[100] mt-3">
-<div class="flex text-white gap-6 text-xl items-center my-3 ">
-    <a href="#" class="px-3"><i class="fa-solid fa-message"></i></a>
-    <p class="font-light text-2xl overflow-hidden tracking-widest z-[99]">BLOG</p>
-</div> -->

@@ -50,13 +50,14 @@
     width: 10px;
     height: 10px;
     background-color: #FFB400;
+    transition: transform 0.2s ease-in-out;
   }
   
   .cursor-outline {
     width: 2.5rem;
     height: 2.5rem;
     border: 1.5px solid #FFB400;
-    transition: all 0.08s linear;
+    transition: all 0.08s ease;
   }
   .cursor-ball,
 .cursor-outline {
@@ -75,7 +76,7 @@
 }
 
 .cursor-hover{
-  transition: 0.4s;
+ 
   transform: scale(8.5);
   opacity: 0.2;
 }
@@ -143,8 +144,8 @@
   }
 }
 
-#MenuBar{
-  animation: menubar 2s linear;
+#Menu{
+  animation: menubar 0.3s linear;
 }
 
   @keyframes menubar {
@@ -155,6 +156,23 @@
     right: 0px;
     }
   }
+
+
+  #NumberOne,#NumberTwo{
+    animation: numOne 1.2s linear;
+    position: relative;
+  }
+
+  @keyframes numOne {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      left: 1;
+    }
+    
+  }
+
 }
 
 

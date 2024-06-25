@@ -1,20 +1,25 @@
 let cursorBall = document.querySelector(".cursor");
 let cursorOutline = document.querySelector(".cursorOutline");
 let About = document.getElementById("ABOUT");
-let AboutButton = document.getElementById("ABOUT-button");
+let AboutButton = document.querySelectorAll(".ABOUT-button");
 let Home = document.getElementById("HOME");
-let HomeButton = document.getElementById("HOME-button");
+let HomeButton = document.querySelectorAll(".HOME-button");
 let heroImage = document.getElementById("hero-image");
 let darkButton = document.getElementById("dark-button");
 let Root = document.getElementById("Root");
 let currentPage = Home;
 let Portfolio = document.getElementById("PORTFOLIO");
-let PortfolioButton = document.getElementById("PORTFOLIO-button");
+let PortfolioButton = document.querySelectorAll(".PORTFOLIO-button");
 let animationSlides = document.getElementById("tr-1");
 let projectCloseButton = document.getElementById("Project-close-button");
 let description = document.querySelector(".Description");
 let body = document.getElementById("bodyTag");
 let mouseToggle = document.querySelector(".fa-toggle-on");
+let Contact = document.getElementById("CONTACT");
+let contactButton = document.querySelectorAll(".CONTACT-button");
+let Blog = document.getElementById("BLOG")
+let blogButton = document.querySelectorAll(".BLOG-button");
+console.log(Blog);
 
 
 let anchorTag = document.querySelectorAll(".link");
@@ -26,56 +31,100 @@ cursorOutline.style.position = "absolute";
 
 
 // this is function to control About page button 
-AboutButton.addEventListener("click", () => {
-    if (currentPage == About) {
-        return 0;
-    }
-    animationSlides.classList.remove("hidden");
-    setTimeout(() => {
-        currentPage.classList.add("hidden");
-        currentPage = About;
-        About.classList.remove("hidden");
-    }, 1200);
-    setTimeout(function () {
-        animationSlides.classList.add("hidden");
-    }, 2300);
+AboutButton.forEach((event) => {
+    event.addEventListener("click", () => {
+        if (currentPage == About) {
+            return 0;
+        }
+        animationSlides.classList.remove("hidden");
+        setTimeout(() => {
+            currentPage.classList.add("hidden");
+            currentPage = About;
+            About.classList.remove("hidden");
+        }, 1200);
+        setTimeout(function () {
+            animationSlides.classList.add("hidden");
+        }, 2300);
 
-});
-
-// this is function to control Home page button 
-HomeButton.addEventListener("click", () => {
-    if (currentPage == Home) {
-        return 0;
-    }
-    animationSlides.classList.remove("hidden");
-    setTimeout(() => {
-        currentPage.classList.add("hidden");
-        currentPage = Home;
-        Home.classList.remove("hidden");
-    }, 1200);
-    setTimeout(function () {
-        animationSlides.classList.add("hidden");
-    }, 2300);
-
+    });
 })
 
 
-// this is function to control Portfolio page button 
+// this is function to control Home page button 
+HomeButton.forEach((event) => {
+    event.addEventListener("click", () => {
+        if (currentPage == Home) {
+            return 0;
+        }
+        animationSlides.classList.remove("hidden");
+        setTimeout(() => {
+            currentPage.classList.add("hidden");
+            currentPage = Home;
+            Home.classList.remove("hidden");
+        }, 1200);
+        setTimeout(function () {
+            animationSlides.classList.add("hidden");
+        }, 2300);
 
-PortfolioButton.addEventListener("click", () => {
-    if (currentPage == Portfolio) {
-        return 0;
-    }
-    animationSlides.classList.remove("hidden");
-    setTimeout(() => {
-        currentPage.classList.add("hidden");
-        currentPage = Portfolio;
-        Portfolio.classList.remove("hidden");
-    }, 1200);
-    setTimeout(function () {
-        animationSlides.classList.add("hidden");
-    }, 2300);
+    });
 });
+
+
+// this is function to control Portfolio page button 
+PortfolioButton.forEach((event) => {
+    event.addEventListener("click", () => {
+        if (currentPage == Portfolio) {
+            return 0;
+        }
+        animationSlides.classList.remove("hidden");
+        setTimeout(() => {
+            currentPage.classList.add("hidden");
+            currentPage = Portfolio;
+            Portfolio.classList.remove("hidden");
+        }, 1200);
+        setTimeout(function () {
+            animationSlides.classList.add("hidden");
+        }, 2300);
+    });
+})
+
+// this is function to control contact page button 
+contactButton.forEach((event) => {
+    event.addEventListener("click", () => {
+        if (currentPage == Contact) {
+            return 0;
+        }
+        animationSlides.classList.remove("hidden");
+        setTimeout(() => {
+            currentPage.classList.add("hidden");
+            currentPage = Contact;
+            Contact.classList.remove("hidden");
+        }, 1200);
+        setTimeout(function () {
+            animationSlides.classList.add("hidden");
+        }, 2300);
+    });
+})
+
+
+// this is function to control Blog page button 
+blogButton.forEach((event) => {
+    event.addEventListener("click", () => {
+        if (currentPage == Blog) {
+            return 0;
+        }
+        animationSlides.classList.remove("hidden");
+        setTimeout(() => {
+            currentPage.classList.add("hidden");
+            currentPage = Blog;
+            Blog.classList.remove("hidden");
+        }, 1200);
+        setTimeout(function () {
+            animationSlides.classList.add("hidden");
+        }, 2300);
+    });
+})
+
 
 
 // this is function to control light mode and dark mode buttons
@@ -113,17 +162,7 @@ document.addEventListener("mousemove", (e) => {
             cursorOutline.classList.remove("hidden");
         })
     });
-    heroImage.addEventListener("mouseenter", () => {
-        cursorBall.classList.remove("cursor-ball");
-        cursorOutline.classList.remove("cursor-outline");
-        cursorBall.classList = "hero-image-mouse";
-        cursorOutline.classList = "";
-    });
-    heroImage.addEventListener("mouseout", () => {
-        cursorBall.classList.remove("hero-image-mouse");
-        cursorBall.classList.add("cursor-ball");
-        cursorOutline.classList.add("cursor-outline");
-    });
+
 });
 
 
@@ -265,23 +304,177 @@ gradientGenerator.addEventListener("click", () => {
     preview.addEventListener("click", () => {
         open("https://github.com/anshchovatiya/Javascript/tree/a633cdad48cffb284f919557d115019792b04a49/Projects/gredientGenerator");
     });
-    ProjectImage.src = "./assets/Portfolio-website-homepage-photo.png";
+    ProjectImage.src = "./assets/random-gradeint-generator.png";
 
     description.classList.remove("hidden");
     description.classList.add("flex");
 })
 
 let MenuButton = document.getElementById("MenuButton");
-let MenuBar = document.getElementById("MenuBar");
+let MenuBar = document.getElementById("Menu");
+let MenuClose = document.querySelector(".Menu-Close");
 
-MenuButton.addEventListener("click",()=>{
-    if(MenuBar.classList.contains("hidden")){
-        MenuBar.classList.remove("hidden");
-        MenuBar.classList.style.left = "20px";
-    }
-    else{
-        MenuBar.classList.add("hidden");
-    }
+MenuButton.addEventListener("click", () => {
+    MenuBar.classList.add("flex");
+    MenuBar.classList.remove("hidden");
+    setTimeout(() => {
+        MenuButton.classList.add("hidden");
+    }, 200);
+});
+
+MenuClose.addEventListener("click", () => {
+    MenuButton.classList.remove("hidden");
+    MenuBar.classList.remove("hidden");
+    MenuBar.classList.add("hidden");
+
 });
 
 
+
+let blogGridOne = document.getElementById("NumberOne");
+let blogGridTwo = document.getElementById("NumberTwo");
+let blogButtonOne = document.getElementById("blog-button-one");
+let blogButtonTwo = document.getElementById("blog-button-two");
+
+
+
+blogButtonOne.addEventListener("click", () => {
+    if (blogGridOne.classList.contains("hidden")) {
+        blogGridOne.classList.remove("hidden");
+        blogGridOne.classList.add("grid");
+        blogGridTwo.classList.add("hidden");
+        blogGridTwo.classList.remove("grid");
+
+        blogButtonOne.style.backgroundColor = "#FFB400";
+
+        blogButtonTwo.style.backgroundColor = "#0000ff25"
+
+    }
+    else {
+        return 0;
+    }
+})
+blogButtonTwo.addEventListener("click", () => {
+    if (blogGridTwo.classList.contains("hidden")) {
+        blogGridTwo.classList.remove("hidden");
+        blogGridTwo.classList.add("grid");
+        blogGridOne.classList.add("hidden");
+        blogGridOne.classList.remove("grid");
+        blogButtonTwo.style.backgroundColor = "#FFB400";
+
+        blogButtonOne.style.backgroundColor = "#0000ff25"
+
+
+    }
+    else {
+        return 0;
+    }
+})
+
+let blogDescriptionPage = document.getElementById("Blog-Description");
+
+
+document.querySelector(".blog-card-1").addEventListener("click", () => {
+    animationSlides.classList.remove("hidden");
+    document.querySelector(".Blog-Writer-name").innerText = "Amir";
+    document.querySelector(".Blog-date").innerText = "09 September 2018";
+    document.querySelector(".Blog-text").innerText = "Programming,books,study";
+    document.querySelector(".blog-image").src = "./assets/blog-post-1.jpg";
+    document.querySelector(".blog-tittle").innerText = "How To Own Your Audience By Creating An Email List";
+
+    setTimeout(() => {
+        currentPage.classList.add("hidden");
+        currentPage = Portfolio;
+        blogDescriptionPage.classList.remove("hidden");
+    }, 1200);
+    setTimeout(function () {
+        animationSlides.classList.add("hidden");
+    }, 2300);
+});
+
+document.querySelector(".blog-card-2").addEventListener("click", () => {
+    animationSlides.classList.remove("hidden");
+    document.querySelector(".Blog-Writer-name").innerText = "Stiffen";
+    document.querySelector(".Blog-date").innerText = "25 May 2020";
+    document.querySelector(".Blog-text").innerText = "Programming,reading,nature";
+    document.querySelector(".blog-image").src = "./assets/blog-post-2.jpg";
+    document.querySelector(".blog-tittle").innerText = "Top 10 Tool-kits For Deep Learning In 2020";
+
+    setTimeout(() => {
+        currentPage.classList.add("hidden");
+        currentPage = Portfolio;
+        blogDescriptionPage.classList.remove("hidden");
+    }, 1200);
+    setTimeout(function () {
+        animationSlides.classList.add("hidden");
+    }, 2300);
+});
+
+document.querySelector(".blog-card-3").addEventListener("click", () => {
+    animationSlides.classList.remove("hidden");
+    document.querySelector(".Blog-Writer-name").innerText = "Robert";
+    document.querySelector(".Blog-date").innerText = "14 April 2021";
+    document.querySelector(".Blog-text").innerText = "Programming,web-development,coding";
+    document.querySelector(".blog-image").src = "./assets/blog-post-3.jpg";
+    document.querySelector(".blog-tittle").innerText = "Everything You Need to Know About Web Accessibility";
+
+    setTimeout(() => {
+        currentPage.classList.add("hidden");
+        currentPage = Portfolio;
+        blogDescriptionPage.classList.remove("hidden");
+    }, 1200);
+    setTimeout(function () {
+        animationSlides.classList.add("hidden");
+    }, 2300);
+});
+document.querySelector(".blog-card-4").addEventListener("click", () => {
+    animationSlides.classList.remove("hidden");
+    document.querySelector(".Blog-Writer-name").innerText = "Amrit";
+    document.querySelector(".Blog-date").innerText = "4 july 2015";
+    document.querySelector(".Blog-text").innerText = "life,health,humour,laugh";
+    document.querySelector(".blog-image").src = "./assets/blog-post-4.jpg";
+    document.querySelector(".blog-tittle").innerText = "How To Inject Humor & Comedy Into Your Brand";
+
+    setTimeout(() => {
+        currentPage.classList.add("hidden");
+        currentPage = Portfolio;
+        blogDescriptionPage.classList.remove("hidden");
+    }, 1200);
+    setTimeout(function () {
+        animationSlides.classList.add("hidden");
+    }, 2300);
+});
+document.querySelector(".blog-card-5").addEventListener("click", () => {
+    animationSlides.classList.remove("hidden");
+    document.querySelector(".Blog-Writer-name").innerText = "Chris";
+    document.querySelector(".Blog-date").innerText = "25 june 2018";
+    document.querySelector(".Blog-text").innerText = "web-design,woman-empowerment,designing";
+    document.querySelector(".blog-image").src = "./assets/blog-post-5.jpg";
+    document.querySelector(".blog-tittle").innerText = "Women In Web Design: How To Achieve Success";
+
+    setTimeout(() => {
+        currentPage.classList.add("hidden");
+        currentPage = Portfolio;
+        blogDescriptionPage.classList.remove("hidden");
+    }, 1200);
+    setTimeout(function () {
+        animationSlides.classList.add("hidden");
+    }, 2300);
+});
+document.querySelector(".blog-card-6").addEventListener("click", () => {
+    animationSlides.classList.remove("hidden");
+    document.querySelector(".Blog-Writer-name").innerText = "Albert";
+    document.querySelector(".Blog-date").innerText = "1 November 2024";
+    document.querySelector(".Blog-text").innerText = "happy-life,traveling,beach";
+    document.querySelector(".blog-image").src = "./assets/blog-post-6.jpg";
+    document.querySelector(".blog-tittle").innerText = "Evergreen Versus Topical Content: An Overview";
+
+    setTimeout(() => {
+        currentPage.classList.add("hidden");
+        currentPage = Portfolio;
+        blogDescriptionPage.classList.remove("hidden");
+    }, 1200);
+    setTimeout(function () {
+        animationSlides.classList.add("hidden");
+    }, 2300);
+});
