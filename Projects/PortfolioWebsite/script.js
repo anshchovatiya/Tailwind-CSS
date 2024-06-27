@@ -1,25 +1,19 @@
 let cursorBall = document.querySelector(".cursor");
 let cursorOutline = document.querySelector(".cursorOutline");
 let About = document.getElementById("ABOUT");
-let AboutButton = document.querySelectorAll(".ABOUT-button");
 let Home = document.getElementById("HOME");
-let HomeButton = document.querySelectorAll(".HOME-button");
 let heroImage = document.getElementById("hero-image");
-let darkButton = document.getElementById("dark-button");
+
 let Root = document.getElementById("Root");
 let currentPage = Home;
 let Portfolio = document.getElementById("PORTFOLIO");
-let PortfolioButton = document.querySelectorAll(".PORTFOLIO-button");
+
 let animationSlides = document.getElementById("tr-1");
-let projectCloseButton = document.getElementById("Project-close-button");
 let description = document.querySelector(".Description");
 let body = document.getElementById("bodyTag");
 let mouseToggle = document.querySelector(".fa-toggle-on");
 let Contact = document.getElementById("CONTACT");
-let contactButton = document.querySelectorAll(".CONTACT-button");
 let Blog = document.getElementById("BLOG")
-let blogButton = document.querySelectorAll(".BLOG-button");
-console.log(Blog);
 
 
 let anchorTag = document.querySelectorAll(".link");
@@ -31,7 +25,7 @@ cursorOutline.style.position = "absolute";
 
 
 // this is function to control About page button 
-AboutButton.forEach((event) => {
+document.querySelectorAll(".ABOUT-button").forEach((event) => {
     event.addEventListener("click", () => {
         if (currentPage == About) {
             return 0;
@@ -51,7 +45,7 @@ AboutButton.forEach((event) => {
 
 
 // this is function to control Home page button 
-HomeButton.forEach((event) => {
+document.querySelectorAll(".HOME-button").forEach((event) => {
     event.addEventListener("click", () => {
         if (currentPage == Home) {
             return 0;
@@ -71,7 +65,7 @@ HomeButton.forEach((event) => {
 
 
 // this is function to control Portfolio page button 
-PortfolioButton.forEach((event) => {
+document.querySelectorAll(".PORTFOLIO-button").forEach((event) => {
     event.addEventListener("click", () => {
         if (currentPage == Portfolio) {
             return 0;
@@ -89,7 +83,7 @@ PortfolioButton.forEach((event) => {
 })
 
 // this is function to control contact page button 
-contactButton.forEach((event) => {
+document.querySelectorAll(".CONTACT-button").forEach((event) => {
     event.addEventListener("click", () => {
         if (currentPage == Contact) {
             return 0;
@@ -106,9 +100,8 @@ contactButton.forEach((event) => {
     });
 })
 
-
 // this is function to control Blog page button 
-blogButton.forEach((event) => {
+document.querySelectorAll(".BLOG-button").forEach((event) => {
     event.addEventListener("click", () => {
         if (currentPage == Blog) {
             return 0;
@@ -129,6 +122,7 @@ blogButton.forEach((event) => {
 
 // this is function to control light mode and dark mode buttons
 document.addEventListener("DOMContentLoaded", () => {
+    let darkButton = document.getElementById("dark-button");
     darkButton.addEventListener("click", () => {
         if (Root.classList.contains("dark")) {
             Root.classList.remove("dark");
@@ -182,7 +176,7 @@ document.addEventListener("mouseup", () => {
 
 
 
-projectCloseButton.addEventListener("click", () => {
+document.getElementById("Project-close-button").addEventListener("click", () => {
     description.classList.add("hidden");
 })
 
