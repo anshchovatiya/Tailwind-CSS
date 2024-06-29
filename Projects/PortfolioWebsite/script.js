@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // this function that track's the mouse and move cursorBall and cursorOutline on that place 
 
+
 document.addEventListener("mousemove", (e) => {
     cursorBall.style.top = e.pageY + "px";
     cursorBall.style.left = e.pageX + "px";
@@ -159,7 +160,15 @@ document.addEventListener("mousemove", (e) => {
 
 });
 
+document.body.addEventListener("mouseover",()=>{
+    cursorBall.classList.remove("hidden");
+    cursorOutline.classList.remove("hidden");
+});
 
+document.body.addEventListener("mouseout",()=>{
+    cursorBall.classList.add("hidden");
+    cursorOutline.classList.add("hidden");
+});
 
 // this function is mouse onclick effect 
 document.addEventListener("mousedown", (e) => {
