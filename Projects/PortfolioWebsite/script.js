@@ -143,10 +143,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("mousemove", (e) => {
-    cursorBall.style.top = e.pageY + "px";
-    cursorBall.style.left = e.pageX + "px";
-    cursorOutline.style.top = e.pageY + "px";
-    cursorOutline.style.left = e.pageX + "px";
+  
+    const mouseY = e.clientY;
+    const mouseX = e.clientX;
+     
+    cursorBall.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+    
+    cursorOutline.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+
+
+
     anchorTag.forEach((event) => {
         event.addEventListener("mouseover", () => {
             cursorBall.classList.add("cursor-hover");
